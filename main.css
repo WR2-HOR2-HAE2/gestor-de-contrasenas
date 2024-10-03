@@ -1,0 +1,145 @@
+body {
+    background-color: #0d3143;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 97vh;
+}
+
+main {
+    border: 1px solid #507b91;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #193c4d;
+    text-align: center;
+    width: 425px;
+    font-family: sans-serif;
+    color:antiquewhite;
+    padding: 1%;
+}
+
+hr {
+    border: 1px solid #507b91;
+}
+
+.data {
+    padding-left: 2%;
+    text-align: left;
+}
+
+label {
+    color: rgba(250, 235, 215, 0.795);
+}
+
+input {
+    background-color: #31505e;
+    color: antiquewhite;
+    font-size: large;
+    border: none;
+    height: 36px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.data input {
+    display: block;
+    width: 95%;
+}
+
+.checkboxes {
+    display: flex;
+    justify-content: center;
+    gap: 12%;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    padding: 15px;
+    font-size: large;
+    font-weight: bolder;
+    border: 1px solid #507b91;
+    border-radius: 8px;
+    background-color: #0d3143;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+input[type="checkbox"]:checked + label {
+    background-color: #507b91;
+}
+
+.number-counts {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-left: -20px;
+    gap: 15%;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.number-counts span {
+  position: relative;
+}
+
+input[type="number"] {
+  width: 36px;
+  text-align: center;
+  padding: 0%;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.button-up, .button-down {
+  position: absolute;
+  border: 1px solid #507b91;
+  background-color: #507b91;
+  color: antiquewhite;
+  font-weight: bold;
+  text-align: center;
+  height: 18px;
+  width: 20px;
+  transition: border 0.5s;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.button-up:hover, .button-down:hover {
+    border: 1px solid #358ab4;
+}
+
+.button-up:active, .button-down:active {
+    border: 1px solid #358ab4;
+    background-color: #358ab4;
+}
+
+.button-up {
+  top: 0;
+  right: -20px;
+  border-radius: 0px 5px 0px 0px;
+}
+
+.button-down {
+  bottom: 0;
+  right: -20px;
+  border-radius: 0px 0px 5px 0px;
+}
+
+#finalpw {
+    border-radius: 3px 3px 3px 3px;
+    background-color: #507b91;
+    height: 45px;
+    width: 95%;
+    font-size: larger;
+    text-align: center;
+    color: antiquewhite;
+    font-weight: bolder;
+}
+
+#finalpw::placeholder {
+    color: rgba(250, 235, 215, 0.514);
+}

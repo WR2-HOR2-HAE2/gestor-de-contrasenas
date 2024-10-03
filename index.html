@@ -1,0 +1,68 @@
+<!doctype html>
+<head>
+    <title>Derivador de Contraseña</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+        <h1>Derivador de Contraseña</h1>
+        
+        <hr style="margin-bottom: 6%;">
+        
+        <div class="data">
+            <label for="username">Nombre Legal:</label>
+            <input type="text" id="username" placeholder="John Doe" autofocus>
+
+            <br>
+
+            <label for="master-password">Contraseña Maestra:</label>
+            <input type="password" id="master-password" placeholder="correct horse battery staple">
+
+            <br>
+
+            <label for="service">Nombre o dirección del servicio:</label>
+            <input type="text" id="service" placeholder="youtube, o youtube.com">
+        </div>
+
+        <hr style="margin-top: 6%; margin-bottom: 6%;">
+
+        <div class="optionlist">
+            <div class="checkboxes">
+                <input type="checkbox" id="option1" value="uppercase" checked>
+                <label for="option1">A-Z</label>
+
+                <input type="checkbox" id="option2" value="lowercase" checked>
+                <label for="option2">a-z</label>
+
+                <input type="checkbox" id="option3" value="numbers" checked>
+                <label for="option3">0-9</label>
+
+                <input type="checkbox" id="option4" value="symbols">
+                <label for="option4">%!@</label>
+            </div>
+            <div class="number-counts">
+                <span>
+                    <label for="pwlenght">Longitud:</label>
+                    <input type="number" id="pwlenght" value="20" min="1" max="99">
+                    <button class="button-up" onclick="addLenght()">+</button>
+                    <button class="button-down" onclick="subLenght()">-</button>
+                </span>
+                <span>
+                    <label for="pwcounter">Versión:</label>
+                    <input type="number" id="pwcounter" value="1" min="1" max="99">
+                    <button class="button-up" onclick="addCounter()">+</button>
+                    <button class="button-down" onclick="subCounter()">-</button>
+                </span>
+            </div>
+        </div>
+
+        <hr style="margin-top: 6%; margin-bottom: 3%;">
+        
+        <div class="result">
+            <input type="text" id="finalpw" placeholder="Contraseña de Servicio" readonly onclick="copyToClipboard()">
+        </div>
+    </main>
+    <script src="./hashwasm/index.umd.min.js"></script>
+    <script src="./seedrandom/seedrandom.min.js"></script>
+    <script src="main.js"></script>
+</body>
