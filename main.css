@@ -7,15 +7,30 @@ body {
 }
 
 main {
-    border: 1px solid #507b91;
-    border-radius: 15px 15px 15px 15px;
+    max-width: 425px; /* Tamaño máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 1em; /* Agrega un poco de espacio interior */
     background-color: #193c4d;
-    text-align: center;
-    width: 425px;
-    font-family: sans-serif;
-    color:antiquewhite;
-    padding: 1%;
-}
+    color: antiquewhite;
+    border: 1px solid #507b91;
+    border-radius: 15px;
+  }
+  
+  /* Media query para dispositivos móviles */
+  @media (max-width: 768px) {
+    main {
+      max-width: 100%; /* Ajusta el tamaño del contenedor para dispositivos móviles */
+      padding: 0.5em; /* Reduce el espacio interior para dispositivos móviles */
+    }
+  }
+  
+  /* Media query para dispositivos de escritorio */
+  @media (min-width: 769px) {
+    main {
+      max-width: 425px; /* Ajusta el tamaño del contenedor para dispositivos de escritorio */
+      padding: 1em; /* Restaura el espacio interior para dispositivos de escritorio */
+    }
+  }
 
 hr {
     border: 1px solid #507b91;
